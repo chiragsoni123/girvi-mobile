@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Girvi Pawn Manager",
+    "slug": "girvi-pawn-manager",
+    "scheme": "girvi",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "icon": "./asset/icon.png",
+    "android": {
+      "package": "com.girvi.pawnmanager",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./asset/adaptive-icon.png",
+        "backgroundColor": "#2A0E44"
+      },
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES"
+      ],
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow Girvi Pawn Manager to unlock your shop ledger with biometrics."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Girvi Pawn Manager to attach photos of pledged ornaments and KYC documents.",
+          "cameraPermission": "Allow Girvi Pawn Manager to photograph pledged ornaments and KYC documents."
+        }
+      ],
+      "expo-secure-store",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./asset/icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#1c1917"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  }
+}
